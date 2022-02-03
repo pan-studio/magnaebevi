@@ -1,0 +1,98 @@
+.page-title-area {
+    background-image: url(../../../../../assets/img/main-banner-1.jpg);
+}
+
+// Food Order
+.food-order-area {
+    background-color: #f9f9f9;
+}
+.food-order-form {
+    background-color: var(--whiteColor);
+    border-radius: 5px;
+    max-width: 700px;
+    margin: {
+        left: auto;
+        right: auto;
+    };
+    h3 {
+        background-color: var(--mainColor);
+        border-radius: 5px 5px 0 0;
+        color: var(--whiteColor);
+        padding: 25px 25px 20px;
+        position: relative;
+        text-align: center;
+        margin-bottom: 0;
+        font-size: 22px;
+        line-height: 1;
+    }
+    form {
+        padding: 25px;
+
+        label {
+            display: block;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+        .form-control {
+            padding-left: 15px;
+
+            &:nth-child(3) {
+                margin-top: 15px;
+            }
+        }
+        .form-select {
+            height: 45px;
+            cursor: pointer;
+            font-size: 16px;
+            box-shadow: unset;
+            border-radius: 5px;
+            color: var(--blackColor);
+            border: 1px solid #eeeeee;
+            padding: {
+                top: 8px;
+                left: 15px;
+            };
+        }
+        textarea.form-control {
+            height: auto;
+        }
+        .btn {
+            padding: 12px 30px 8px;
+            letter-spacing: 1px;
+            text-align: center;
+            border-radius: 1px;
+            font-size: 14px;
+            margin-top: 4px;
+            float: right;
+        }
+    }
+}
+
+/* Max width 767px */
+@media only screen and (max-width: 767px) {
+
+    .food-order-form {
+        max-width: 100%;
+        
+        h3 {
+            padding: 20px 15px 18px;
+            font-size: 18px;
+        }
+        form {
+            padding: 20px;
+        }
+    }
+
+}
+
+/* Min width 576px to Max width 767px */
+@media only screen and (min-width: 576px) and (max-width: 767px) {}
+
+/* Min width 768px to Max width 991px */
+@media only screen and (min-width: 768px) and (max-width: 991px) {}
+
+/* Min width 992px to Max width 1199px */
+@media only screen and (min-width: 992px) and (max-width: 1199px) {}
+
+/* Min width 1200px to Max width 1399px */
+@media only screen and (min-width: 1200px) and (max-width: 1399px) {}

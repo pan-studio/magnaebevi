@@ -1,0 +1,108 @@
+<div id="gallery" class="gallery-area ptb-100 pb-0">
+    <div class="container">
+        <div class="section-title">
+            <span>Gallery</span>
+            <h2>See Our Gallery</h2>
+        </div>
+    </div>
+    <div class="row m-0">
+        <div class="col-lg-3 col-sm-6 col-md-6 p-0">
+            <div class="single-image">
+                <img src="assets/img/gallery-img1.jpg" alt="gallery-img">
+                <button class="popup-btn" (click)="ngxSmartModalService.getModal('popupOne').open()"><i class="icofont-search-restaurant"></i></button>
+                <div class="image-content">
+                    <h3>Salad</h3>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3 col-sm-6 col-md-6 p-0">
+            <div class="single-image">
+                <img src="assets/img/gallery-img2.jpg" alt="gallery-img">
+                <button class="popup-btn" (click)="ngxSmartModalService.getModal('popupTwo').open()"><i class="icofont-search-restaurant"></i></button>
+                <div class="image-content">
+                    <h3>Sandwich</h3>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3 col-sm-6 col-md-6 p-0">
+            <div class="single-image">
+                <img src="assets/img/gallery-img3.jpg" alt="gallery-img">
+                <button class="popup-btn" (click)="ngxSmartModalService.getModal('popupThree').open()"><i class="icofont-search-restaurant"></i></button>
+                <div class="image-content">
+                    <h3>Bread</h3>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3 col-sm-6 col-md-6 p-0">
+            <div class="single-image">
+                <img src="assets/img/gallery-img4.jpg" alt="gallery-img">
+                <button class="popup-btn" (click)="ngxSmartModalService.getModal('popupFour').open()"><i class="icofont-search-restaurant"></i></button>
+                <div class="image-content">
+                    <h3>Steak</h3>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3 col-sm-6 col-md-6 p-0">
+            <div class="single-image">
+                <img src="assets/img/gallery-img5.jpg" alt="gallery-img">
+                <button class="popup-btn" (click)="ngxSmartModalService.getModal('popupFive').open()"><i class="icofont-search-restaurant"></i></button>
+                <div class="image-content">
+                    <h3>Tuna Steak</h3>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3 col-sm-6 col-md-6 p-0">
+            <div class="single-image">
+                <img src="assets/img/gallery-img6.jpg" alt="gallery-img">
+                <button class="popup-btn" (click)="ngxSmartModalService.getModal('popupSix').open()"><i class="icofont-search-restaurant"></i></button>
+                <div class="image-content">
+                    <h3>Fish</h3>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3 col-sm-6 col-md-6 p-0">
+            <div class="single-image">
+                <img src="assets/img/gallery-img7.jpg" alt="gallery-img">
+                <button class="popup-btn" (click)="ngxSmartModalService.getModal('popupSeven').open()"><i class="icofont-search-restaurant"></i></button>
+                <div class="image-content">
+                    <h3>Rice</h3>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3 col-sm-6 col-md-6 p-0">
+            <div class="single-image">
+                <img src="assets/img/gallery-img8.jpg" alt="gallery-img">
+                <button class="popup-btn" (click)="ngxSmartModalService.getModal('popupEight').open()"><i class="icofont-search-restaurant"></i></button>
+                <div class="image-content">
+                    <h3>Spaghetti</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="image-popup">
+    <ngx-smart-modal #popupOne [identifier]="'popupOne'">
+        <img src="assets/img/gallery-img1.jpg" alt="gallery-img">
+    </ngx-smart-modal>
+    <ngx-smart-modal #popupTwo [identifier]="'popupTwo'">
+        <img src="assets/img/gallery-img2.jpg" alt="gallery-img">
+    </ngx-smart-modal>
+    <ngx-smart-modal #popupThree [identifier]="'popupThree'">
+        <img src="assets/img/gallery-img3.jpg" alt="gallery-img">
+    </ngx-smart-modal>
+    <ngx-smart-modal #popupFour [identifier]="'popupFour'">
+        <img src="assets/img/gallery-img4.jpg" alt="gallery-img">
+    </ngx-smart-modal>
+    <ngx-smart-modal #popupFive [identifier]="'popupFive'">
+        <img src="assets/img/gallery-img5.jpg" alt="gallery-img">
+    </ngx-smart-modal>
+    <ngx-smart-modal #popupSix [identifier]="'popupSix'">
+        <img src="assets/img/gallery-img6.jpg" alt="gallery-img">
+    </ngx-smart-modal>
+    <ngx-smart-modal #popupSeven [identifier]="'popupSeven'">
+        <img src="assets/img/gallery-img7.jpg" alt="gallery-img">
+    </ngx-smart-modal>
+    <ngx-smart-modal #popupEight [identifier]="'popupEight'">
+        <img src="assets/img/gallery-img8.jpg" alt="gallery-img">
+    </ngx-smart-modal>
+</div>

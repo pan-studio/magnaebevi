@@ -1,0 +1,179 @@
+<header 
+    class="top-area"
+    [ngClass]="{'d-none' : router?.url === '/book-a-table' || router?.url === '/my-account' || router?.url === '/forgot-password' || router?.url === '/change-password'}"
+>
+
+    <!-- Top Header -->
+    <div 
+        class="top-bar" 
+        [ngClass]="{'template-color-bg' : router?.url === '/index-2' || router?.url === '/index-4'}"
+    >
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-md-6">
+                    <div class="call-to-action">
+                        <p><i class="icofont-envelope"></i> Email: <a href="mailto:hello@fryio.com">hello@fryio.com</a></p>
+                        <p><i class="icofont-phone"></i> Phone: <a href="tel:+00086525124">+0 008 652 5124</a></p>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6">
+                    <ul class="top-social">
+                        <li><a href="#" target="_blank"><i class="icofont-facebook"></i></a></li>
+                        <li><a href="#" target="_blank"><i class="icofont-twitter"></i></a></li>
+                        <li><a href="#" target="_blank"><i class="icofont-dribbble"></i></a></li>
+                        <li><a href="#" target="_blank"><i class="icofont-behance"></i></a></li>
+                        <li><a href="#" target="_blank"><i class="icofont-rss-feed"></i></a></li>
+                    </ul>
+                    <div class="opening-hours">
+                        <p><i class="icofont-wall-clock"></i> Opening Hours : 8:00am - 11:30pm</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Default Navbar -->
+    <nav 
+        class="navbar navbar-expand-lg navbar-light bg-light transparent-navbar" 
+        stickyClass="sticky-box-shadow" 
+        ngStickyNav
+        [ngClass]="{'d-none' : router?.url === '/index-3' || router?.url === '/index-4'}"
+    >
+        <div class="container" [class.active]="classApplied">
+            <a 
+                class="navbar-brand" 
+                routerLink="/" 
+            >
+                <img src="assets/img/white-logo.png" alt="white-logo">
+            </a>
+            <a 
+                class="navbar-brand black-logo" 
+                routerLink="/" 
+            >
+                <img src="assets/img/black-logo.png" alt="black-logo">
+            </a>
+            <button class="navbar-toggler" type="button" (click)="toggleClass()">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item"><span class="nav-link" (click)="onClick('home')">Home</span></li>
+                    <li class="nav-item"><span class="nav-link" (click)="onClick('about')">About</span></li>
+                    <li class="nav-item"><span class="nav-link" (click)="onClick('offer')">Offer</span></li>
+                    <li class="nav-item"><span class="nav-link" (click)="onClick('menu')">Menu</span></li>
+                    <li class="nav-item"><span class="nav-link" (click)="onClick('chefs')">Chefs</span></li>
+                    <li class="nav-item"><span class="nav-link" (click)="onClick('gallery')">Gallery</span></li>
+                    <li class="nav-item"><span class="nav-link" (click)="onClick('blog')">Blog</span></li>
+                    <li class="nav-item"><span class="nav-link" (click)="onClick('contact')">Contact</span></li>
+                </ul>
+                <ul class="navbar-nav ml-auto for-responsive">
+                    <li class="nav-item"><span class="nav-link" (click)="toggleClass(); onClick('home')">Home</span></li>
+                    <li class="nav-item"><span class="nav-link" (click)="toggleClass(); onClick('about')">About</span></li>
+                    <li class="nav-item"><span class="nav-link" (click)="toggleClass(); onClick('offer')">Offer</span></li>
+                    <li class="nav-item"><span class="nav-link" (click)="toggleClass(); onClick('menu')">Menu</span></li>
+                    <li class="nav-item"><span class="nav-link" (click)="toggleClass(); onClick('chefs')">Chefs</span></li>
+                    <li class="nav-item"><span class="nav-link" (click)="toggleClass(); onClick('gallery')">Gallery</span></li>
+                    <li class="nav-item"><span class="nav-link" (click)="toggleClass(); onClick('blog')">Blog</span></li>
+                    <li class="nav-item"><span class="nav-link" (click)="toggleClass(); onClick('contact')">Contact</span></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Navbar For Home Demo 3 -->
+    <nav 
+        class="navbar navbar-expand-lg middle-logo-navbar navbar-light bg-light transparent-navbar d-none" 
+        stickyClass="sticky-box-shadow" 
+        ngStickyNav
+        [ngClass]="{'d-block' : router?.url === '/index-3'}"
+    >
+        <div class="container" [class.active]="classApplied">
+            <a 
+                class="navbar-brand" 
+                routerLink="/" 
+            >
+                <img src="assets/img/white-logo.png" alt="white-logo">
+            </a>
+            <a 
+                class="navbar-brand black-logo" 
+                routerLink="/" 
+            >
+                <img src="assets/img/black-logo.png" alt="black-logo">
+            </a>
+            <button class="navbar-toggler" type="button" (click)="toggleClass()">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item"><span class="nav-link" (click)="onClick('home')">Home</span></li>
+                    <li class="nav-item"><span class="nav-link" (click)="onClick('about')">About</span></li>
+                    <li class="nav-item"><span class="nav-link" (click)="onClick('offer')">Offer</span></li>
+                    <li class="nav-item"><span class="nav-link" (click)="onClick('menu')">Menu</span></li>
+                    <li class="nav-item logo">
+                        <a routerLink="/" (click)="onClick('home')">
+                            <img src="assets/img/white-logo.png" alt="white-logo">
+                            <img src="assets/img/black-logo.png" alt="black-logo" class="black-logo">
+                        </a>
+                    </li>
+                    <li class="nav-item"><span class="nav-link" (click)="onClick('chefs')">Chefs</span></li>
+                    <li class="nav-item"><span class="nav-link" (click)="onClick('gallery')">Gallery</span></li>
+                    <li class="nav-item"><span class="nav-link" (click)="onClick('blog')">Blog</span></li>
+                    <li class="nav-item"><span class="nav-link" (click)="onClick('contact')">Contact</span></li>
+                </ul>
+                <ul class="navbar-nav ml-auto for-responsive">
+                    <li class="nav-item"><span class="nav-link" (click)="toggleClass(); onClick('home')">Home</span></li>
+                    <li class="nav-item"><span class="nav-link" (click)="toggleClass(); onClick('about')">About</span></li>
+                    <li class="nav-item"><span class="nav-link" (click)="toggleClass(); onClick('offer')">Offer</span></li>
+                    <li class="nav-item"><span class="nav-link" (click)="toggleClass(); onClick('menu')">Menu</span></li>
+                    <li class="nav-item"><span class="nav-link" (click)="toggleClass(); onClick('chefs')">Chefs</span></li>
+                    <li class="nav-item"><span class="nav-link" (click)="toggleClass(); onClick('gallery')">Gallery</span></li>
+                    <li class="nav-item"><span class="nav-link" (click)="toggleClass(); onClick('blog')">Blog</span></li>
+                    <li class="nav-item"><span class="nav-link" (click)="toggleClass(); onClick('contact')">Contact</span></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Navbar For Home Demo 4 -->
+    <nav 
+        class="navbar navbar-expand-lg navbar-light bg-light white-bg-navbar d-none" 
+        stickyClass="sticky-box-shadow" 
+        ngStickyNav
+        [ngClass]="{'d-block' : router?.url === '/index-4'}"
+    >
+        <div class="container" [class.active]="classApplied">
+            <a 
+                class="navbar-brand black-logo" 
+                routerLink="/" 
+            >
+                <img src="assets/img/black-logo.png" alt="black-logo">
+            </a>
+            <button class="navbar-toggler" type="button" (click)="toggleClass()">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item"><span class="nav-link" (click)="onClick('home')">Home</span></li>
+                    <li class="nav-item"><span class="nav-link" (click)="onClick('about')">About</span></li>
+                    <li class="nav-item"><span class="nav-link" (click)="onClick('offer')">Offer</span></li>
+                    <li class="nav-item"><span class="nav-link" (click)="onClick('menu')">Menu</span></li>
+                    <li class="nav-item"><span class="nav-link" (click)="onClick('chefs')">Chefs</span></li>
+                    <li class="nav-item"><span class="nav-link" (click)="onClick('gallery')">Gallery</span></li>
+                    <li class="nav-item"><span class="nav-link" (click)="onClick('blog')">Blog</span></li>
+                    <li class="nav-item"><span class="nav-link" (click)="onClick('contact')">Contact</span></li>
+                </ul>
+                <ul class="navbar-nav ml-auto for-responsive">
+                    <li class="nav-item"><span class="nav-link" (click)="toggleClass(); onClick('home')">Home</span></li>
+                    <li class="nav-item"><span class="nav-link" (click)="toggleClass(); onClick('about')">About</span></li>
+                    <li class="nav-item"><span class="nav-link" (click)="toggleClass(); onClick('offer')">Offer</span></li>
+                    <li class="nav-item"><span class="nav-link" (click)="toggleClass(); onClick('menu')">Menu</span></li>
+                    <li class="nav-item"><span class="nav-link" (click)="toggleClass(); onClick('chefs')">Chefs</span></li>
+                    <li class="nav-item"><span class="nav-link" (click)="toggleClass(); onClick('gallery')">Gallery</span></li>
+                    <li class="nav-item"><span class="nav-link" (click)="toggleClass(); onClick('blog')">Blog</span></li>
+                    <li class="nav-item"><span class="nav-link" (click)="toggleClass(); onClick('contact')">Contact</span></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+</header>

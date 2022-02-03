@@ -1,0 +1,27 @@
+<div class="flex-shrink-0 p-3 bg-white" style="width: 280px;">
+  <a href="/" class="d-flex align-items-center pb-3 mb-3 link-dark text-decoration-none border-bottom">
+    <svg class="bi me-2" width="30" height="24"><use xlink:href="#bootstrap"></use></svg>
+    <span class="fs-5 fw-semibold">{{sidebarMenu.title}}</span>
+  </a>
+  <ul class="list-unstyled ps-0" *ngFor="let item of sidebarMenu.items; let i = index">
+    <li class="mb-1" >
+        <button type="button" class="btn btn-outline-primary" (click)="collapse.toggle()" [attr.aria-expanded]="!isCollapsed[i]"
+          aria-controls="collapseExample">
+        {{item.titolo}}
+        </button>
+      <div #collapse="ngbCollapse" [(ngbCollapse)]="isCollapsed[i]">
+        <div class="card">
+          <div class="card-body">
+            <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small" *ngFor="let child of item.children">
+              <li><a href= "child.link" class="link-dark rounded">{{child.titolo}}</a></li>
+            </ul>          
+          </div>
+        </div>
+      </div>
+
+    </li>
+  </ul>
+
+
+
+</div>

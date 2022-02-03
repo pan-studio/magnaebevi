@@ -1,0 +1,109 @@
+.cta-area {
+    z-index: 1;
+    position: relative;
+    background: {
+        size: cover;
+        repeat: no-repeat;
+        position: center center;
+        image: url(../../../../assets/img/find-us-bg.jpg);
+    }
+    &::before {
+        top: 0;
+        left: 0;
+        content: '';
+        width: 100%;
+        opacity: .6;
+        z-index: -1;
+        height: 100%;
+        position: absolute;
+        background: var(--blackColor);
+    }
+    &::after {
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: -1;
+        height: 100%;
+        content: '';
+        position: absolute;
+        background: {
+            position: center center;
+            image: url(../../../../assets/img/dots.png);
+            repeat: repeat;
+        }
+    }
+    span {
+        color: var(--mainColor);
+        display: block;
+        font: {
+            size: 30px;
+            family: var(--fontFamily2);
+        };
+        margin: {
+            bottom: 15px;
+            top: -11px;
+        };
+    }
+    h2 {
+        margin-bottom: -13px;
+        color: var(--whiteColor);
+        font: {
+            size: 50px;
+            weight: 700;
+        };
+    }
+}
+
+/* Max width 767px */
+@media only screen and (max-width: 767px) {
+
+    .cta-area {
+        text-align: center;
+
+        span {
+            font-size: 22px;
+            margin-top: -7px;
+        }
+        h2 {
+            font-size: 30px;
+        }
+        .text-right {
+            text-align: center !important;
+
+            .btn {
+                margin-top: 35px;
+            }
+        }
+    }
+
+}
+
+/* Min width 576px to Max width 767px */
+@media only screen and (min-width: 576px) and (max-width: 767px) {}
+
+/* Min width 768px to Max width 991px */
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+
+    .cta-area {
+        h2 {
+            font-size: 35px;
+        }
+        .text-right {
+            text-align: start !important;
+
+            .btn {
+                margin-top: 35px;
+            }
+        }
+    }
+
+}
+
+/* Min width 992px to Max width 1199px */
+@media only screen and (min-width: 992px) and (max-width: 1199px) {}
+
+/* Min width 1200px to Max width 1399px */
+@media only screen and (min-width: 1200px) and (max-width: 1399px) {}
+
+/* Min width 1550px */
+@media only screen and (min-width: 1550px) {}

@@ -1,0 +1,18 @@
+<footer 
+    class="footer-area"
+    [ngClass]="{'d-none' : router?.url === '/book-a-table' || router?.url === '/my-account' || router?.url === '/forgot-password' || router?.url === '/change-password'}"
+>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 col-md-6">
+                <p>Copyright <i class="icofont-copyright"></i>2021 Fryio. All rights reserved</p>
+            </div>
+            <div class="col-lg-6 col-md-6">
+                <ul>
+                    <li><a routerLink="/terms-conditions">Terms & Conditions</a></li>
+                    <li><a routerLink="/privacy-policy">Privacy Policy</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</footer>

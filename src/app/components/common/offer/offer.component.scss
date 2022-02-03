@@ -1,0 +1,119 @@
+.offer-area {
+    position: relative;
+    z-index: 1;
+    background: {
+        image: url(../../../../assets/img/offer-bg.jpg);
+        position: center center;
+        repeat: no-repeat;
+        size: cover;
+    }
+    &::before {
+        top: 0;
+        left: 0;
+        width: 100%;
+        opacity: .6;
+        content: '';
+        z-index: -1;
+        height: 100%;
+        position: absolute;
+        background: var(--blackColor);
+    }
+    .section-title {
+        h2 {
+            color: var(--whiteColor);
+        }
+    }
+}
+.single-offer {
+    img {
+        border-radius: 5px;
+    }
+    .offer-content {
+        padding: 30px;
+        position: relative;
+        border-radius: 5px;
+        background-color: var(--whiteColor);
+        margin: {
+            top: -30px;
+            left: 30px;
+            right: 30px;
+        };
+        a {
+            display: inline-block;
+        }
+        h3 {
+            margin-bottom: 10px;
+            font: {
+                size: 22px;
+                weight: 700;
+            };
+            span {
+                display: block;
+                font-size: 15px;
+                margin-bottom: 10px;
+                color: var(--mainColor);
+                text-transform: capitalize;
+            }
+        }
+        p {
+            margin-bottom: 20px;
+        }
+    }
+}
+
+/* Max width 767px */
+@media only screen and (max-width: 767px) {
+
+    .single-offer {
+        .offer-content {
+            padding: 15px;
+            border-radius: 0;
+            margin: {
+                left: 0;
+                right: 0;
+                top: -8px;
+            };
+            h3 {
+                font-size: 18px;
+                line-height: 27px;
+
+                span {
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+
+}
+
+/* Min width 576px to Max width 767px */
+@media only screen and (min-width: 576px) and (max-width: 767px) {}
+
+/* Min width 768px to Max width 991px */
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+
+    .single-offer {
+        .offer-content {
+            padding: 25px;
+            border-radius: 0;
+            margin: {
+                right: 10px;
+                left: 10px;
+                top: -15px;
+            };
+            h3 {
+                font-size: 20px;
+            }
+        }
+    }
+
+}
+
+/* Min width 992px to Max width 1199px */
+@media only screen and (min-width: 992px) and (max-width: 1199px) {}
+
+/* Min width 1200px to Max width 1399px */
+@media only screen and (min-width: 1200px) and (max-width: 1399px) {}
+
+/* Min width 1550px */
+@media only screen and (min-width: 1550px) {}

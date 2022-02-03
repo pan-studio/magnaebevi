@@ -1,0 +1,105 @@
+.book-a-table-area {
+    height: 100vh;
+    background-color: #f9f9f9;
+}
+.book-a-table-content {
+    background-color: var(--whiteColor);
+    border-radius: 5px;
+    max-width: 650px;
+    margin: {
+        left: auto;
+        right: auto;
+    };
+    .title {
+        background-color: var(--mainColor);
+        border-radius: 5px 5px 0 0;
+        padding: 25px 25px 20px;
+        position: relative;
+
+        h3 {
+            color: var(--whiteColor);
+            margin-bottom: 0;
+            font-size: 22px;
+            line-height: 1;
+        }
+        .link-btn {
+            top: 50%;
+            margin: 0;
+            padding: 0;
+            right: 20px;
+            font-size: 30px;
+            position: absolute;
+            color: var(--whiteColor);
+            transform: translateY(-50%);
+        }
+    }
+    .modalForm {
+        padding: 25px;
+
+        .form-select {
+            height: 45px;
+            cursor: pointer;
+            font-size: 16px;
+            color: #777777;
+            box-shadow: unset;
+            border-radius: 5px;
+            border: 1px solid #eeeeee;
+            padding: {
+                top: 8px;
+                left: 10px;
+            };
+        }
+        .btn {
+            padding: 12px 30px 8px;
+            letter-spacing: 1px;
+            text-align: center;
+            border-radius: 1px;
+            font-size: 14px;
+            margin-top: 4px;
+            float: right;
+        }
+    }
+}
+
+/* Max width 767px */
+@media only screen and (max-width: 767px) {
+
+    .book-a-table-content {
+        max-width: 100%;
+        
+        .title {
+            padding: 20px 25px 15px 15px;
+    
+            h3 {
+                font-size: 18px;
+            }
+            .link-btn {
+                right: 15px;
+                font-size: 20px;
+            }
+        }
+        .modalForm {
+            padding: 15px;
+    
+            .btn {
+                float: unset;
+            }
+        }
+    } 
+
+}
+
+/* Min width 576px to Max width 767px */
+@media only screen and (min-width: 576px) and (max-width: 767px) {}
+
+/* Min width 768px to Max width 991px */
+@media only screen and (min-width: 768px) and (max-width: 991px) {}
+
+/* Min width 992px to Max width 1199px */
+@media only screen and (min-width: 992px) and (max-width: 1199px) {}
+
+/* Min width 1200px to Max width 1399px */
+@media only screen and (min-width: 1200px) and (max-width: 1399px) {}
+
+/* Min width 1550px */
+@media only screen and (min-width: 1550px) {}

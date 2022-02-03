@@ -1,0 +1,13 @@
+<div class="video-area ptb-100">
+    <div class="container">
+        <div class="video-content">
+            <h2>Best Place of Culinary</h2>
+            <button class="video-btn popup-youtube" (click)="ngxSmartModalService.getModal('videoPopupOne').open()"><i class="icofont-play"></i></button>
+        </div>
+    </div>
+</div>
+<div class="video-popup">
+    <ngx-smart-modal #videoPopupOne [identifier]="'videoPopupOne'">
+        <iframe src="https://www.youtube.com/embed/bk7McNUjWgw"></iframe>
+    </ngx-smart-modal>
+</div>

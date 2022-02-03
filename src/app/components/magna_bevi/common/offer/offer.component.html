@@ -1,0 +1,24 @@
+<div id="offer" class="offer-area ptb-100">
+    <div class="container">
+        <div class="section-title">
+            <span>Amazing Offer</span>
+            <h2>This Week Special</h2>
+        </div>
+        <div class="offer-slides">
+
+            <owl-carousel-o [options]="offerSlides">
+                <ng-template *ngFor="let item of items" carouselSlide>
+                    <div class="single-offer">
+                        <img src="assets/img/offer-img1.jpg" alt="offer-img">
+                        <div class="offer-content">
+                            <h3><span>50% off</span> {{item.nome}}</h3>
+                            <p>{{item.descrizione}} a soli {{item.prezzo}}</p>
+                            <a routerLink="/order" class="btn btn-primary">Order Now</a>
+                        </div>
+                    </div>
+                </ng-template>
+          
+            </owl-carousel-o>
+        </div>
+    </div>
+</div>

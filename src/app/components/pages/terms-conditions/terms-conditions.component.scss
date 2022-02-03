@@ -1,0 +1,44 @@
+.page-title-area {
+    background-image: url(../../../../assets/img/main-banner-1.jpg);
+}
+
+// Terms Conditions
+.terms-conditions-content {
+    h6, .h6, h5, .h5, h4, .h4, h3, .h3, h2, .h2, h1, .h1 {
+        margin-bottom: 12px;
+        font-weight: 700;
+
+        &:not(:first-child) {
+            margin-top: 25px;
+        }
+    }
+    strong {
+        color: var(--blackColor) !important;
+    }
+    p {
+        a {
+            color: var(--mainColor);
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+    ul, ol {
+        li {
+            color: #999999;
+            margin-bottom: 12px;
+
+            a {
+                color: var(--mainColor);
+    
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+}

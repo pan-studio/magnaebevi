@@ -1,0 +1,76 @@
+.instagram-area {
+    position: relative;
+}
+.instagram-title {
+    top: 50%;
+    left: 50%;
+    z-index: 22;
+    position: absolute;
+    transform: translate(-50%, -50%);
+
+    h3 {
+        text-align: center;
+        font-size: 20px;
+        margin: 0;
+
+        a {
+            display: inline-block;
+            padding: 20px 20px 15px;
+            background: var(--whiteColor);
+        }
+    }
+}
+.instagram-item {
+    a {
+        display: block;
+
+        img {
+            transition: .5s;
+
+            &:hover {
+                opacity: 0.5;
+            }
+        }
+    }
+}
+
+/* Max width 767px */
+@media only screen and (max-width: 767px) {
+    
+    .instagram-title {
+        h3 {
+            font-size: 14px;
+
+            a {
+                padding: 10px 5px 5px;
+            }
+        }
+    }
+
+}
+
+/* Min width 576px to Max width 767px */
+@media only screen and (min-width: 576px) and (max-width: 767px) {}
+
+/* Min width 768px to Max width 991px */
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+
+    .instagram-item-list {
+        .instagram-follow {
+            h3 {
+                font-size: 15px;
+                padding: 19px 15px 11px;
+            }
+        }
+    }
+
+}
+
+/* Min width 992px to Max width 1199px */
+@media only screen and (min-width: 992px) and (max-width: 1199px) {}
+
+/* Min width 1200px to Max width 1399px */
+@media only screen and (min-width: 1200px) and (max-width: 1399px) {}
+
+/* Min width 1550px */
+@media only screen and (min-width: 1550px) {}

@@ -1,0 +1,86 @@
+.reservation-area {
+    z-index: 1;
+    text-align: center;
+    position: relative;
+    background: {
+        size: cover;
+        repeat: no-repeat;
+        position: center center;
+        image: url(../../../../../assets/img/reservation-bg.jpg);
+    }
+    &::before {
+        top: 0;
+        left: 0;
+        content: '';
+        opacity: .5;
+        z-index: -1;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        background: var(--blackColor);
+    }
+    &::after {
+        top: 0;
+        left: 0;
+        width: 100%;
+        content: '';
+        z-index: -1;
+        height: 100%;
+        position: absolute;
+        background: {
+            image: url(../../../../../assets/img/dots.png);
+            position: center center;
+            repeat: repeat;
+        }
+    }
+    h2 {
+        color: var(--whiteColor);
+        text-transform: capitalize;
+        font: {
+            size: 50px;
+            weight: 700;
+        };
+        margin: {
+            top: -5px;
+            bottom: 25px;
+        };
+    }
+}
+
+/* Max width 767px */
+@media only screen and (max-width: 767px) {
+
+    .reservation-area {
+        h2 {
+            font-size: 30px;
+            margin: {
+                top: -3px;
+                bottom: 20px;
+            };
+        }
+    }
+
+}
+
+/* Min width 576px to Max width 767px */
+@media only screen and (min-width: 576px) and (max-width: 767px) {}
+
+/* Min width 768px to Max width 991px */
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+
+    .reservation-area {
+        h2 {
+            font-size: 35px;
+        }
+    }
+
+}
+
+/* Min width 992px to Max width 1199px */
+@media only screen and (min-width: 992px) and (max-width: 1199px) {}
+
+/* Min width 1200px to Max width 1399px */
+@media only screen and (min-width: 1200px) and (max-width: 1399px) {}
+
+/* Min width 1550px */
+@media only screen and (min-width: 1550px) {}
