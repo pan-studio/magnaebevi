@@ -1,7 +1,14 @@
 <div *ngIf="hideNavbar == false">
 <app-navbar></app-navbar>
 </div>
-<router-outlet></router-outlet>
+
+    <div *ngIf="showDashboard == true">
+       <app-sidebar></app-sidebar>
+    </div>
+    <div *ngIf="showDashboard == false">
+        <router-outlet></router-outlet>
+    </div>
+
 <div *ngIf="hideFooter == false">
 <app-footer></app-footer>
 </div>

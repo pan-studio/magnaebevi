@@ -16,10 +16,17 @@ let magna_const = {
     hideNavbar: [
         '/login',
         '/',
-        '/admin'
+        '/admin',
+        '/admin/createmenu'
     ],
     hideFooter: [
-        '/admin'
+        '/admin',
+        '/admin/createmenu'
+    ],
+    showDashboard: [
+        '/admin',
+        '/admin/createmenu',
+
     ],
 
     ruoli: {

@@ -8,7 +8,7 @@ let sidebarAdmin = {
         {
           id: 'children_menu_crea',
           titolo: 'Crea menu',
-          link: '#'
+          link: 'admin/createmenu'
         }, 
         {
           id: 'children_menu_cerca',

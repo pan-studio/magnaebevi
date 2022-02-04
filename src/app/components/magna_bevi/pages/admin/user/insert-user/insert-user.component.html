@@ -1,0 +1,48 @@
+<p>insert-user works!</p>
+<form [formGroup]="registrazioneFormGroup" (ngSubmit)="registra()">
+    <div class="form-group">
+        <input type="text" class="form-control" placeholder="Inserire nome" formControlName="nome" required>
+    </div>
+    <div class="form-group">
+        <input type="text" class="form-control" placeholder="Inserire cognome"  formControlName="cognome" required>
+    </div>
+    <div class="form-group">
+        <input type="email" class="form-control" placeholder="Email Address" formControlName="email" required>
+    </div>
+ 
+     <input  type="hidden" value="20" formControlName="loyalty">
+
+    <div class="form-group">
+        <input type="text" class="form-control" placeholder="Inserire username" formControlName="username" required>
+    </div>
+
+    <div class="form-group">
+        <input type="text" class="form-control" placeholder="Inserire coupon (facoltativo)" formControlName="couponCode" required>
+    </div>
+
+    <div class="form-group">
+        <input type="password" class="form-control" placeholder="Password" formControlName="password" required>
+    </div>
+
+    <div class="form-group">
+        <input type="password" class="form-control" placeholder="Reinserire password" formControlName="passwordValidazione" required>
+    </div>
+    
+    <div class="form-group">
+        <select class="form-select" (change)="setRuolo($event.target)">
+            <option value="Cliente">Cliente</option>
+            <option value="Admin">Admin</option>
+        </select>
+    </div>
+    
+    <input type="hidden" formControlName="ruolo"
+    value="Cliente">
+    <div class="form-group">
+        <input type="text" class="form-control" placeholder="Inserire nome" formControlName="loyalty" required>
+    </div>
+    <button type="submit" >Register</button>
+</form>
+
+
+
+

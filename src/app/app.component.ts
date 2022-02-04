@@ -20,7 +20,7 @@ export class AppComponent {
     routerSubscription: any;
     hideNavbar: boolean = false;
     hideFooter: boolean = false;
-
+    showDashboard: boolean = false;
 
     constructor(private router: Router) {}
 
@@ -43,6 +43,12 @@ export class AppComponent {
             for(let i = 0; i < magna_const.hideFooter.length; i++) {
                 if(this.router.url == magna_const.hideFooter[i]) {
                     this.hideFooter = true;
+                }
+            }
+
+            for(let i = 0; i < magna_const.showDashboard.length; i++) {
+                if(this.router.url == magna_const.hideFooter[i]) {
+                    this.showDashboard = true;
                 }
             }
 

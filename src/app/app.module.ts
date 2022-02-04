@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { CUSTOM_ELEMENTS_SCHEMA, NgModule, NO_ERRORS_SCHEMA } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CarouselModule } from 'ngx-owl-carousel-o';
@@ -56,6 +56,11 @@ import { CartComponent } from './components/magna_bevi/pages/cart/cart.component
 import { AdminhomeComponent } from './components/magna_bevi/pages/admin/adminhome/adminhome.component';
 import { SidebarComponent } from './components/magna_bevi/common/sidebar/sidebar.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { CreatemenuComponent } from './components/magna_bevi/pages/admin/menu/createmenu/createmenu.component';
+import { FormlyBootstrapModule } from '@ngx-formly/bootstrap';
+import { FormlyModule } from '@ngx-formly/core';
+import { RepeatTypeComponent } from './components/magna_bevi/common/dynamicform/customtype/repeat-section.type';
+import { DynamicFormComponent } from './components/magna_bevi/common/dynamicform/dynamicform.component';
 
 @NgModule({
     declarations: [
@@ -103,7 +108,10 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
         HomepageComponent,
         CartComponent,
         AdminhomeComponent,
-        SidebarComponent
+        SidebarComponent,
+        CreatemenuComponent,
+        RepeatTypeComponent,
+        DynamicFormComponent
     ],
     imports: [
         NgbModule,
@@ -116,10 +124,20 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
         StickyNavModule,
         HttpClientModule,
         ReactiveFormsModule,
+        FormlyBootstrapModule,
+        FormlyModule.forRoot({
+            types: [
+              { name: 'repeat', component: RepeatTypeComponent },
+            ],
+          }),
         NgxSmartModalModule.forRoot()
 
     ],
     providers: [],
-    bootstrap: [AppComponent]
+    bootstrap: [AppComponent],
+    schemas: [
+        CUSTOM_ELEMENTS_SCHEMA,
+        NO_ERRORS_SCHEMA
+      ]
 })
 export class AppModule { }

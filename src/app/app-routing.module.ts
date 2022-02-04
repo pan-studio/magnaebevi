@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AdminhomeComponent } from './components/magna_bevi/pages/admin/adminhome/adminhome.component';
+import { CreatemenuComponent } from './components/magna_bevi/pages/admin/menu/createmenu/createmenu.component';
 import { CartComponent } from './components/magna_bevi/pages/cart/cart.component';
 import { HomepageComponent } from './components/magna_bevi/pages/homepage/homepage.component';
 import { LoginComponent } from './components/magna_bevi/pages/login/login.component';
@@ -47,6 +48,10 @@ const routes: Routes = [
    
     { path: '', component: LoginComponent },
     { path: 'admin', component: AdminhomeComponent,canActivate: [AuthguardGuard],
+    data: {
+        role: magna_const.ruoli.ADMIN
+      }},
+      { path: 'admin/createmenu', component: CreatemenuComponent,canActivate: [AuthguardGuard],
     data: {
         role: magna_const.ruoli.ADMIN
       }},
