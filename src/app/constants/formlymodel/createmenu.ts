@@ -75,8 +75,8 @@ let createMenuFormModel = [
                     label: 'disponibile',
                     required: true,
                     options: [
-                      {label: 'SI', value: '0'},
-                      {label: 'NO', value: '1'},
+                      {label: 'SI', value: 0},
+                      {label: 'NO', value: 1},
                     ],
                   },
                 },
