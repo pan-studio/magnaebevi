@@ -1,0 +1,72 @@
+<p>Table is just a mapping of objects to table rows with <code>ngFor</code></p>
+
+<table class="table table-striped">
+  <thead>
+  <tr>
+    <th scope="col">Id</th>
+    <th scope="col">Tipologia</th>
+    <th scope="col">Lingua</th>
+    <th scope="col">Sezioni e piatti</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let menu of listaMenu; index as i">
+    <th scope="row">{{ menu.id }}</th>
+    <td>
+      {{menu.tipologia}}
+    </td>
+    <td>{{menu.lingua}}</td>
+    <td>
+        <tr *ngFor="let sezione of menu.sezioni">
+            <td scope="col">{{sezione.label}}</td>
+          
+            <td style="padding-top: 15px;">        
+                <tr *ngFor="let item of sezione.items; index as indexItem">
+
+                    <td scope="col">{{item.nome}}</td>
+                    <td><input id="modifica_{{item.id}}" type="text" style="display:none"></td>
+                    <td ><button (click)="modificaSconto('modifica_'+item.id)">Modifica Sconto</button></td>
+                    <td ><button>Elimina</button></td>
+
+                </tr>
+               
+            </td>
+        </tr>
+    </td>
+  </tr>
+  </tbody>
+</table>
+
+
+<form [formGroup]="scontoFormGroup" (ngSubmit)="gestisciSconto()">
+    <input type="hidden" formControlName="id">
+<table class="table table-striped">
+    <thead>
+        <tr>
+          <th scope="col">Data inizio</th>
+          <th scope="col">Data fine</th>
+          <th scope="col">Percentuale sconto</th>
+          <th scope="col" >Validita sconto</th>
+        </tr>
+        </thead>
+    <tbody>
+        <tr>
+            <td>        
+                <input type="text" class="form-control" placeholder="Data inizio" formControlName="data_inizio" required>
+            </td>
+            <td>
+                <input type="text" class="form-control" placeholder="Data fine" formControlName="data_fine" required>
+            </td>
+            <td>
+                <input type="number" class="form-control" placeholder="Percentuale sconto" formControlName="percentuale" required>
+            </td>
+            <td>
+               <select size="1" formControlName="active">
+                   <option value="0">SI</option>
+                   <option value="1">NO</option>
+               </select>
+            </td>
+        </tr>
+    </tbody>
+</table>
+</form>
