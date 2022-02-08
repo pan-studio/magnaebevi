@@ -41,7 +41,7 @@ let magna_const = {
         CLIENTE: 'Cliente'
     },
 
-    menuToLoad: 2
+    menuToLoad: 8
 }
 
 export default magna_const;

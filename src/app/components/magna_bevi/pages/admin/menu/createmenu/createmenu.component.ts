@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { FormGroup } from '@angular/forms';
 import {FormlyFieldConfig, FormlyFormOptions} from '@ngx-formly/core';
 import createMenuFormModel from 'src/app/constants/formlymodel/createmenu';
+import { MenuServiceService } from 'src/app/services/menu-service.service';
 
 @Component({
   selector: 'app-createmenu',
@@ -12,11 +13,13 @@ export class CreatemenuComponent  {
 
   model:any = createMenuFormModel;
 
-  onSubmit(menu:any) {
-    console.log(menu);
-  }
-  constructor() { }
+ 
+  constructor(private menuService: MenuServiceService) { }
 
-  
+  onSubmit(menu:any) {
+    this.menuService.creaMenu(menu).subscribe(res => {
+      
+    })
+  }
 
 }
