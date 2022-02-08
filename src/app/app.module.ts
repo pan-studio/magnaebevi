@@ -61,6 +61,8 @@ import { FormlyBootstrapModule } from '@ngx-formly/bootstrap';
 import { FormlyModule } from '@ngx-formly/core';
 import { RepeatTypeComponent } from './components/magna_bevi/common/dynamicform/customtype/repeat-section.type';
 import { DynamicFormComponent } from './components/magna_bevi/common/dynamicform/dynamicform.component';
+import { ScontisticaComponent } from './components/magna_bevi/pages/admin/scontistica/createmenu/scontistica.component';
+import { MenulistComponent } from './components/magna_bevi/pages/admin/menu/menulist/menulist.component';
 
 @NgModule({
     declarations: [
@@ -110,6 +112,8 @@ import { DynamicFormComponent } from './components/magna_bevi/common/dynamicform
         AdminhomeComponent,
         SidebarComponent,
         CreatemenuComponent,
+        MenulistComponent,
+        ScontisticaComponent,
         RepeatTypeComponent,
         DynamicFormComponent
     ],

@@ -1,7 +1,9 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { ScontisticaComponent } from '../components/magna_bevi/pages/admin/scontistica/createmenu/scontistica.component';
 import magna_const from '../constants/constants';
 import { Menu } from '../interfaces/menu.interface';
+import { Sconto } from '../interfaces/sconto.interfaces';
 
 @Injectable({
   providedIn: 'root'
@@ -20,8 +22,12 @@ export class MenuServiceService {
     return this.httpClient.get<Menu>(magna_const.service.beUrlMenu +id);
   }
   
+  public creaScontistica(scontistica: Sconto){
+    return this.httpClient.post<Sconto>(magna_const.service.beUrlSconto, scontistica);
+  }
+
   //todo 
   public getAllMenu(){
-    
+    return this.httpClient.get<Menu[]>(magna_const.service.beUrlMenu)
   }
 }

@@ -10,22 +10,29 @@ let magna_const = {
         beurl: 'http://localhost:8080',
         beUrlLogin: "http://localhost:8080/api/v1/login/",
         beUrlMenu: "http://localhost:8080/api/v1/magnabevi/menu/",
-        beUrlOrdini: "http://localhost:8080/api/v1/magnabevi/ordine/"
+        beUrlOrdini: "http://localhost:8080/api/v1/magnabevi/ordine/",
+        beUrlSconto: "http://localhost:8080/api/v1/magnabevi/scontistica/"
     },
 
     hideNavbar: [
         '/login',
         '/',
         '/admin',
-        '/admin/createmenu'
+        '/admin/createmenu',
+        '/admin/menulista',
+        '/admin/scontistica'
     ],
     hideFooter: [
         '/admin',
-        '/admin/createmenu'
+        '/admin/createmenu',
+        '/admin/menulista',
+        '/admin/scontistica'
     ],
     showDashboard: [
         '/admin',
         '/admin/createmenu',
+        '/admin/menulista',
+        '/admin/scontistica'
 
     ],
 

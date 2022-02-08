@@ -13,8 +13,8 @@ let sidebarAdmin = {
         {
           id: 'children_menu_cerca',
           titolo: 'Cerca menu',
-          link: '#' 
-        }
+          link: 'admin/menulista' 
+        }, 
       ]
     },
     {
@@ -50,7 +50,7 @@ let sidebarAdmin = {
         {
           id: 'children_scontistica_gestione',
           titolo: 'Gestione sconti',
-          link: '#'
+          link: 'admin/scontistica'
         }
       ]
     },
