@@ -66,7 +66,15 @@ export class MenulistComponent implements OnInit {
         item = item.sconto;
         this.scontoFormGroup.setValue(item);
         }
-
+        else {
+          this.scontoFormGroup = new FormGroup({
+            id: new FormControl("-1", [Validators.required]),
+            dataInizio: new FormControl("", [Validators.required]),
+            dataFine: new FormControl("", [Validators.required]),
+            percentuale: new FormControl("", [Validators.required]),
+            active: new FormControl("", [Validators.required]),
+          });
+        }
 
       }
 
@@ -84,10 +92,19 @@ export class MenulistComponent implements OnInit {
       dataFine: this.scontoFormGroup.controls.dataFine.value,
       percentuale: this.scontoFormGroup.controls.percentuale.value,
       active: Boolean(this.scontoFormGroup.controls.active.value)
+  }
+    if (this.scontoFormGroup.controls.id.value == -1) {
+      let sconto = {
+        dataInizio: this.scontoFormGroup.controls.dataInizio.value,
+        dataFine: this.scontoFormGroup.controls.dataFine.value,
+        percentuale: this.scontoFormGroup.controls.percentuale.value,
+        active: Boolean(this.scontoFormGroup.controls.active.value)
+      } 
     }
-
+debugger;
     this.menuservice.creaScontistica(sconto).subscribe(res => {
-
+      this.updateScontoSelezionato(sconto);
+      this.editSconto();
     })
 
   }
@@ -100,6 +117,7 @@ export class MenulistComponent implements OnInit {
   }
 
   editSconto() {
+    debugger;
     this.menuservice.updateItem(this.currentItem).subscribe(res => {
 
     })
