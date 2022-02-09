@@ -24,8 +24,9 @@
                 <tr *ngFor="let item of sezione.items; index as indexItem">
 
                     <td scope="col">{{item.nome}}</td>
-                    <td><input id="modifica_{{item.id}}" type="text" style="display:none"></td>
-                    <td ><button (click)="modificaSconto('modifica_'+item.id)">Modifica Sconto</button></td>
+                    
+                    <td *ngIf="item.sconto != null" scope="col">SCONTO: {{item.sconto.percentuale}} %</td>
+                    <td ><button (click)="modificaSconto(item, sezione.id, menu.id)">Modifica Sconto</button></td>
                     <td ><button>Elimina</button></td>
 
                 </tr>
@@ -38,7 +39,15 @@
 </table>
 
 
-<form [formGroup]="scontoFormGroup" (ngSubmit)="gestisciSconto()">
+
+<div id="sconto-form">
+    <label for="combo-sconti">Seleziona uno sconto tra quelli disponibili oppure crea uno nuovo</label>
+    <select name="combo-sconti" id="combo-sconti" (change) = "modificaSconto($event.target)">
+        <option *ngFor="let sconto of listaSconti" value="{{sconto | json}}" >{{sconto.percentuale}} - {{sconto.dataInizio}} - {{sconto.dataFine}}</option>
+    </select>
+    <button (click)="editSconto()" >Applica sconto</button>
+
+<form  [formGroup]="scontoFormGroup" (ngSubmit)="gestisciSconto()">
     <input type="hidden" formControlName="id">
 <table class="table table-striped">
     <thead>
@@ -52,10 +61,10 @@
     <tbody>
         <tr>
             <td>        
-                <input type="text" class="form-control" placeholder="Data inizio" formControlName="data_inizio" required>
+                <input type="text" class="form-control" placeholder="Data inizio" formControlName="dataInizio" required>
             </td>
             <td>
-                <input type="text" class="form-control" placeholder="Data fine" formControlName="data_fine" required>
+                <input type="text" class="form-control" placeholder="Data fine" formControlName="dataFine" required>
             </td>
             <td>
                 <input type="number" class="form-control" placeholder="Percentuale sconto" formControlName="percentuale" required>
@@ -66,7 +75,11 @@
                    <option value="1">NO</option>
                </select>
             </td>
+            <td>
+                <input type="submit" value="Salva sconto">
+            </td>
         </tr>
     </tbody>
 </table>
 </form>
+</div>
