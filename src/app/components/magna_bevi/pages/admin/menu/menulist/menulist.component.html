@@ -26,7 +26,7 @@
                     <td scope="col">{{item.nome}}</td>
                     
                     <td *ngIf="item.sconto != null" scope="col">SCONTO: {{item.sconto.percentuale}} %</td>
-                    <td ><button (click)="modificaSconto(item, sezione.id, menu.id)">Modifica Sconto</button></td>
+                    <td ><button (click)="modificaSconto(item)">Modifica Sconto</button></td>
                     <td ><button>Elimina</button></td>
 
                 </tr>

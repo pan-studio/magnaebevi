@@ -46,25 +46,31 @@ export class MenulistComponent implements OnInit {
     console.log(menu);
   }
 
-  modificaSconto(item: any, idSezione = -1, idMenu = -1) {
+  modificaSconto(item: any) {
     let el = document.getElementById("sconto-form");
-    if (el && el.style)
+    if (el != null && el.style != null)
       el.style.display = 'block';
+
+    
 
     if (item != null) {
 
       if (item.value) {
         item = JSON.parse(item.value);
         this.updateScontoSelezionato(item);
+        this.scontoFormGroup.setValue(item);
       } else {
         this.currentItem = item;
-        this.currentItem.idSezione = idSezione;
-        this.currentItem.idMenu = idMenu;
+        if(item.sconto) {
         this.currentItem.idSconto = item.sconto.id;
         item = item.sconto;
+        this.scontoFormGroup.setValue(item);
+        }
+
+
       }
 
-      this.scontoFormGroup.setValue(item);
+    
     }
 
 
